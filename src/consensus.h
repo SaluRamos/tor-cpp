@@ -34,6 +34,9 @@ class consensus
 
     void destroy();
 
+    void set_valid_until(const std::string& date_str) { _valid_until.parse(date_str); }
+    const datetime& get_valid_until() const { return _valid_until; }
+
     // Getters
     onion_router* get_onion_router_by_name(const std::string& name) const;
     

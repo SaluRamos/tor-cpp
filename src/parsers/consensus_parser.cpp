@@ -31,12 +31,12 @@ std::vector<std::string> consensus_parser::split(std::string_view s, char delimi
 }
 
 onion_router::status_flags consensus_parser::string_to_status_flags(const std::vector<std::string>& tokens) {
-    onion_router::status_flags result = onion_router::status_flag::none;
+    onion_router::status_flags result = static_cast<onion_router::status_flags>(onion_router::status_flag::none);
 
     for (const auto& token : tokens) {
         for (const auto& [name, flag] : status_flag_map) {
             if (token == name) {
-                result |= flag;
+                result |= static_cast<onion_router::status_flags>(flag);
                 break;
             }
         }
@@ -69,10 +69,10 @@ void consensus_parser::parse(consensus& consensus_obj, std::string_view content,
             case document_location::preamble: {
                 if (tokens[0] == PREAMBLE_VALID_UNTIL && tokens.size() >= 3) {
                     std::string date_str = tokens[1] + " " + tokens[2];
-                    consensus_obj._valid_until.parse(date_str);
+                    consensus_obj.set_valid_until(date_str);
 
                     // Verifica se o consenso expirou usando chrono
-                    if (reject_invalid && consensus_obj._valid_until < std::chrono::system_clock::now()) {
+                    if (reject_invalid && consensus_obj.get_valid_until() < std::chrono::system_clock::now()) {
                         return;
                     }
                 }
