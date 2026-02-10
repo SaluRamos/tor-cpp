@@ -1,45 +1,45 @@
 cls
 
-powershell Get-ChildItem -Recurse -Filter *.obj | Remove-Item -Force
+@REM powershell Get-ChildItem -Recurse -Filter *.obj | Remove-Item -Force
 
 clang-cl /c ^
-cell.cpp ^
-circuit.cpp ^
-circuit_node.cpp ^
-circuit_node_crypto_state.cpp ^
-consensus.cpp ^
-hidden_service.cpp ^
-onion_router.cpp ^
-relay_cell.cpp ^
-tor_socket.cpp ^
-tor_stream.cpp ^
-crypto\hybrid_encryption.cpp ^
-crypto\key_agreement_ntor.cpp ^
-crypto\key_agreement_tap.cpp ^
-parsers\consensus_parser.cpp ^
-parsers\hidden_service_descriptor_parser.cpp ^
-parsers\introduction_point_parser.cpp ^
-parsers\onion_router_descriptor_parser.cpp
+src/cell.cpp ^
+src/circuit.cpp ^
+src/circuit_node.cpp ^
+src/circuit_node_crypto_state.cpp ^
+src/consensus.cpp ^
+src/hidden_service.cpp ^
+src/onion_router.cpp ^
+src/relay_cell.cpp ^
+src/tor_socket.cpp ^
+src/tor_stream.cpp ^
+src/crypto\hybrid_encryption.cpp ^
+src/crypto\key_agreement_ntor.cpp ^
+src/crypto\key_agreement_tap.cpp ^
+src/parsers\consensus_parser.cpp ^
+src/parsers\hidden_service_descriptor_parser.cpp ^
+src/parsers\introduction_point_parser.cpp ^
+src/parsers\onion_router_descriptor_parser.cpp
 
 
 @REM lib.exe ^
 @REM /OUT minitor.lib ^
 @REM /MT ^
 @REM /O1 ^
-@REM cell.o ^
-@REM circuit.o ^
-@REM circuit_node.o ^
-@REM circuit_node_crypto_state.o ^
-@REM consensus.o ^
-@REM hidden_service.o ^
-@REM onion_router.o ^
-@REM relay_cell.o ^
-@REM tor_socket.o ^
-@REM tor_stream.o ^
-@REM crypto\hybrid_encryption.o ^
-@REM crypto\key_agreement_ntor.o ^
-@REM crypto\key_agreement_tap.o ^
-@REM parsers\consensus_parser.o ^
-@REM parsers\hidden_service_descriptor_parser.o ^
-@REM parsers\introduction_point_parser.o ^
-@REM parsers\onion_router_descriptor_parser.o
+@REM src/cell.o ^
+@REM src/circuit.o ^
+@REM src/circuit_node.o ^
+@REM src/circuit_node_crypto_state.o ^
+@REM src/consensus.o ^
+@REM src/hidden_service.o ^
+@REM src/onion_router.o ^
+@REM src/relay_cell.o ^
+@REM src/tor_socket.o ^
+@REM src/tor_stream.o ^
+@REM src/crypto\hybrid_encryption.o ^
+@REM src/crypto\key_agreement_ntor.o ^
+@REM src/crypto\key_agreement_tap.o ^
+@REM src/parsers\consensus_parser.o ^
+@REM src/parsers\hidden_service_descriptor_parser.o ^
+@REM src/parsers\introduction_point_parser.o ^
+@REM src/parsers\onion_router_descriptor_parser.o
