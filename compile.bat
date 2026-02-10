@@ -13,13 +13,13 @@ src/onion_router.cpp ^
 src/relay_cell.cpp ^
 src/tor_socket.cpp ^
 src/tor_stream.cpp ^
-src/crypto\hybrid_encryption.cpp ^
-src/crypto\key_agreement_ntor.cpp ^
-src/crypto\key_agreement_tap.cpp ^
-src/parsers\consensus_parser.cpp ^
-src/parsers\hidden_service_descriptor_parser.cpp ^
-src/parsers\introduction_point_parser.cpp ^
-src/parsers\onion_router_descriptor_parser.cpp
+src/crypto/hybrid_encryption.cpp ^
+src/crypto/key_agreement_ntor.cpp ^
+src/crypto/key_agreement_tap.cpp ^
+src/parsers/consensus_parser.cpp ^
+src/parsers/hidden_service_descriptor_parser.cpp ^
+src/parsers/introduction_point_parser.cpp ^
+src/parsers/onion_router_descriptor_parser.cpp
 
 
 @REM lib.exe ^
@@ -36,10 +36,10 @@ src/parsers\onion_router_descriptor_parser.cpp
 @REM src/relay_cell.o ^
 @REM src/tor_socket.o ^
 @REM src/tor_stream.o ^
-@REM src/crypto\hybrid_encryption.o ^
-@REM src/crypto\key_agreement_ntor.o ^
-@REM src/crypto\key_agreement_tap.o ^
-@REM src/parsers\consensus_parser.o ^
-@REM src/parsers\hidden_service_descriptor_parser.o ^
-@REM src/parsers\introduction_point_parser.o ^
-@REM src/parsers\onion_router_descriptor_parser.o
+@REM src/crypto/hybrid_encryption.o ^
+@REM src/crypto/key_agreement_ntor.o ^
+@REM src/crypto/key_agreement_tap.o ^
+@REM src/parsers/consensus_parser.o ^
+@REM src/parsers/hidden_service_descriptor_parser.o ^
+@REM src/parsers/introduction_point_parser.o ^
+@REM src/parsers/onion_router_descriptor_parser.o
