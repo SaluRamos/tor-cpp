@@ -6,7 +6,7 @@
 // Nota: Você deve plugar aqui sua implementação de decode_base64
 // que retorne um buffer de bytes (std::vector<uint8_t> ou similar).
 
-namespace mini::tor {
+namespace tor {
 
 void onion_router_descriptor_parser::parse(
     onion_router* router,
@@ -81,4 +81,4 @@ void onion_router_descriptor_parser::parse(
     }
 }
 
-} // namespace mini::tor
+}

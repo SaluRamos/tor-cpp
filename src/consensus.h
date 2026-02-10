@@ -89,7 +89,6 @@ class consensus
     std::vector<uint16_t> _allowed_dir_ports;
     size_t _max_try_count = 5;
 
-    // Substituindo pair_list/map da mini pela CRT
     std::map<std::vector<uint8_t>, onion_router*> _onion_router_map;
     std::vector<onion_router*> _onion_router_list;
 };

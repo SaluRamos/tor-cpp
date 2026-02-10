@@ -47,7 +47,6 @@ class onion_router
     std::string get_name() const;
     void set_name(const std::string& value);
 
-    // Representação de IP como string para simplificar sem mini::net::ip_address
     std::string get_ip_address() const;
     void set_ip_address(const std::string& value);
 
@@ -96,7 +95,6 @@ class onion_router
     bool _descriptor_fetched;
 };
 
-// Substituindo mini::collections::list por std::vector
 using onion_router_list = std::vector<onion_router*>;
 
 }

@@ -10,8 +10,6 @@ namespace tor {
 
 class circuit;
 
-// Removida a herança de io::stream da mini. 
-// Implementamos uma interface de stream compatível com a CRT.
 class tor_stream
 {
   public:

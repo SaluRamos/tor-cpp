@@ -6,12 +6,9 @@
 #include <chrono>
 #include <memory>
 #include <string_view>
-
-// Assumindo que estas classes ainda existem no seu namespace mini::tor
-// mas agora usam tipos padrão internamente.
 #include "../consensus.h"
 
-namespace mini::tor {
+namespace tor {
 
 class consensus_parser {
 public:

@@ -5,7 +5,7 @@
 // funções equivalentes da sua biblioteca de criptografia (OpenSSL, etc) 
 // ou helpers que utilizem a CRT padrão.
 
-namespace mini::tor {
+namespace tor {
 
 void introduction_point_parser::parse(
     consensus& consensus_obj,
@@ -77,4 +77,4 @@ void introduction_point_parser::parse(
     }
 }
 
-} // namespace mini::tor
+}

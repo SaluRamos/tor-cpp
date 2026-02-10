@@ -8,7 +8,7 @@
 #include "../consensus.h"
 #include "../onion_router.h"
 
-namespace mini::tor {
+namespace tor {
 
 struct introduction_point_parser {
     // onion_router_list geralmente é um std::vector de ponteiros ou referências
@@ -32,4 +32,4 @@ struct introduction_point_parser {
     );
 };
 
-} // namespace mini::tor
+}

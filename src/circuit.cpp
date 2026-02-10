@@ -7,6 +7,25 @@
 
 namespace tor {
 
+void circuit::rendezvous_introduce(circuit* rendezvous_circ, const uint8_t* cookie)
+{
+    // Implementation placeholder:
+    // 1. Construct the payload for INTRODUCE1 cell (containing the rendezvous cookie and public key info).
+    // 2. Encrypt the payload if necessary (usually to the introduction point).
+    // 3. Send the cell using send_relay_cell().
+    
+    // Example stub (prevent linker error):
+    (void)rendezvous_circ;
+    (void)cookie;
+    
+    // TODO: Implement the actual INTRODUCE1 cell creation logic here.
+    // relay_cell cell(circuit_id, command::relay_introduce1, ...);
+    // send_relay_cell(cell);
+    
+    // Update state if needed
+    set_state(state::rendezvous_introduced);
+}
+
 circuit::circuit(tor_socket& socket)
   : _tor_socket(socket)
   , _circuit_id(get_next_circuit_id())

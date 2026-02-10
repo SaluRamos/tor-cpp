@@ -3,11 +3,7 @@
 #include <algorithm>
 #include <iostream>
 
-// Se precisar de base64 ou conversões específicas que eram da mini:
-// #include <boost/beast/core/detail/base64.hpp> ou similar. 
-// Abaixo assumirei que você tem um helper para o decode.
-
-namespace mini::tor {
+namespace tor {
 
 const std::vector<std::pair<std::string, onion_router::status_flag>> consensus_parser::status_flag_map = {
     {"Authority", onion_router::status_flag::authority},
@@ -115,4 +111,4 @@ void consensus_parser::parse(consensus& consensus_obj, std::string_view content,
     }
 }
 
-} // namespace mini::tor
+}

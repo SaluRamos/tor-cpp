@@ -8,7 +8,7 @@
 #include "../consensus.h"
 #include "introduction_point_parser.h"
 
-namespace mini::tor {
+namespace tor {
 
 struct hidden_service_descriptor_parser {
     // onion_router_list assume-se ser um std::vector ou similar definido em consensus.h
@@ -31,4 +31,4 @@ struct hidden_service_descriptor_parser {
     );
 };
 
-} // namespace mini::tor
+}

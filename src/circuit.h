@@ -20,6 +20,9 @@ using circuit_node_list = std::vector<std::unique_ptr<circuit_node>>;
 class circuit
 {
   public:
+    bool is_ready() const { return get_state() == state::ready; }
+    void rendezvous_introduce(circuit* rendezvous_circ, const uint8_t* cookie);
+
     enum class state
     {
       none,

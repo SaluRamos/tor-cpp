@@ -53,7 +53,6 @@ class circuit_node
     circuit_node_type _type;
     onion_router* _onion_router;
 
-    // Substituindo mini::ptr por std::unique_ptr
     std::unique_ptr<key_agreement> _handshake;
     std::unique_ptr<circuit_node_crypto_state> _crypto_state;
 

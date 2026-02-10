@@ -7,7 +7,7 @@
 // Mantendo a dependência do domínio Tor
 #include "../onion_router.h"
 
-namespace mini::tor {
+namespace tor {
 
 struct onion_router_descriptor_parser {
     enum class document_location {
@@ -35,4 +35,4 @@ struct onion_router_descriptor_parser {
     );
 };
 
-} // namespace mini::tor
+}

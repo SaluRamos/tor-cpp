@@ -2,11 +2,7 @@
 #include <sstream>
 #include <algorithm>
 
-// Nota: Como a mini::crypto::base64 foi removida, 
-// você precisará de um substituto para o decode.
-// Se você não tiver um, pode usar uma implementação simples de Base64 ou OpenSSL.
-
-namespace mini::tor {
+namespace tor {
 
 void hidden_service_descriptor_parser::parse(
     consensus& consensus_obj,
@@ -44,9 +40,6 @@ void hidden_service_descriptor_parser::parse(
         return;
     }
 
-    // --- Decodificação Base64 ---
-    // Substituindo mini::crypto::base64::decode por uma chamada hipotética da CRT/Standard.
-    // Você deve plugar aqui sua função de decode (ex: base64_decode do OpenSSL ou similar).
     std::vector<uint8_t> decoded_data = decode_base64_std(current_message);
 
     // Converte os bytes decodificados de volta para string para o próximo parser
@@ -63,4 +56,4 @@ void hidden_service_descriptor_parser::parse(
     introduction_point_list = std::move(parser.introduction_point_list);
 }
 
-} // namespace mini::tor
+}

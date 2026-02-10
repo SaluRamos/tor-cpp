@@ -37,11 +37,13 @@ public:
     void send_cell(const cell& c);
     cell recv_cell();
 
+    onion_router* get_onion_router() const { return _onion_router; }
     protocol_version_type get_protocol_version() const { return _protocol_version; }
     bool is_connected() const;
     bool is_ready() const;
 
 private:
+
     enum class state {
         closed,
         connecting,
@@ -61,7 +63,6 @@ private:
     void recv_certificates();
     void recv_cell_loop();
 
-    // Substitutos da MINI CRT para Standard CRT
     std::unique_ptr<std::thread> _recv_thread;
     std::mutex _state_mutex;
     std::condition_variable _state_cv;

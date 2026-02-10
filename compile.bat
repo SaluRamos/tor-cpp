@@ -2,7 +2,7 @@ cls
 
 @REM powershell Get-ChildItem -Recurse -Filter *.obj | Remove-Item -Force
 
-clang-cl /c ^
+clang-cl /c /std:c++17 /EHsc ^
 src/cell.cpp ^
 src/circuit.cpp ^
 src/circuit_node.cpp ^
@@ -23,7 +23,7 @@ src/parsers/onion_router_descriptor_parser.cpp
 
 
 @REM lib.exe ^
-@REM /OUT minitor.lib ^
+@REM /OUT tor.lib ^
 @REM /MT ^
 @REM /O1 ^
 @REM src/cell.o ^

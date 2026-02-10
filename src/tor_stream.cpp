@@ -71,7 +71,6 @@ size_t tor_stream::read(void* buffer, size_t size)
   size_t size_to_copy = std::min(size, _buffer.size());
   std::memcpy(buffer, _buffer.data(), size_to_copy);
 
-  // Remove os dados lidos do buffer (equivalente ao slice da mini)
   _buffer.erase(_buffer.begin(), _buffer.begin() + size_to_copy);
 
   // Se o buffer esvaziou, podemos sinalizar o envio de SENDME se necessário
